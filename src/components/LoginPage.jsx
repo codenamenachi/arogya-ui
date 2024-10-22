@@ -45,7 +45,7 @@ const LoginPage = () => {
         <div className="col-4 login-signup">
           <div className="submit-container">
             <div className="submit" onClick={handleLogin}>
-              Login with Google
+              Login with Google iD
             </div>
           </div>
         </div>
