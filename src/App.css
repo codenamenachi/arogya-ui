@@ -1,0 +1,288 @@
+.App {
+  background-color: #86d8b4;
+  text-align: center;
+  height: 100vh;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+.App-logo {
+  position: absolute;
+  top: 10px;
+  font-size: 200px;
+  font-family: "Caveat", cursive;
+  text-align: center;
+}
+
+.submit-container {
+  display: flex;
+  gap: 20px;
+  margin: 30px 180px;
+}
+
+.submit {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.gray {
+  background-color: slategray;
+}
+
+.login {
+  width: 200px;
+  font-weight: 700;
+}
+
+.footer {
+  height: 40%;
+}
+
+.App-header {
+  background-color: #86d8b4;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-family: monospace;
+  color: white;
+}
+.form-input {
+  display: inline;
+  width: 50%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #b3e8d2;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid #86d8b4;
+  border-bottom: 1px solid black;
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-login {
+  color: #000000;
+  position: absolute;
+  top: 350px;
+  display: inline;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.landing-page {
+  background-color: #86d8b4;
+}
+
+.landing-header {
+  background-color: #7ac6a4;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  height: 13%;
+}
+
+.landing-header-logo {
+  background-color: #86d8b4;
+  width: max-content;
+  text-align: left;
+  color: #e2f0d9;
+  position: static;
+  top: 0px;
+  font-size: 100px;
+  font-family: "Caveat", cursive;
+  padding-right: 50px;
+  padding-left: 40px;
+  border: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.landing-header-welcome {
+  background-color: #7ac6a4;
+  width: max-content;
+  text-align: left;
+  color: #595959;
+  position: absolute;
+  top: 40px;
+  left: 170px;
+  font-size: 40px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.landing-header-date {
+  background-color: #7ac6a4;
+  width: max-content;
+  text-align: left;
+  color: #595959;
+  position: absolute;
+  top: 20px;
+  right: 2%;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.landing-header-time {
+  background-color: #7ac6a4;
+  width: max-content;
+  text-align: left;
+  color: #595959;
+  position: absolute;
+  top: 60px;
+  right: 2%;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.landing-header-wish {
+  background-color: #7ac6a4;
+  width: max-content;
+  text-align: left;
+  color: #595959;
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.link-panel {
+  background-color: #31664e;
+}
+
+.sidebar-link {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  padding: 1px;
+  list-style: none;
+  height: 30px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-label:hover {
+  background: #e2f0d9;
+  border-left: 6px solid green;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-label {
+  margin-left: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: larger;
+}
+
+.save-page {
+  display: grid;
+  text-align: left;
+  padding-top: 2%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  left: 10px;
+}
+
+.search-page {
+  display: grid;
+  text-align: left;
+  padding-top: 2%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  left: 10px;
+}
+
+.save-page-text {
+  font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.text-area {
+  display: flex;
+  align-items: normal;
+  padding-top: 10px;
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "sidebar content content"
+    "foot foot foot";
+  grid-template-rows: 150px auto 30px;
+}
+
+.searchby-label:hover {
+  background: #e2f0d9;
+  border-left: 6px solid green;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchby-label {
+  margin-left: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: medium;
+  padding: 10px;
+  opacity: "10%";
+}
+
+.searchby-heading {
+  margin-left: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 100vw) {
+  button.full-width {
+    width: 100%;
+  }
+}
+
+.disable-link:hover {
+  background: #e2f0d9;
+  border-left: 6px solid red;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.logout-link:hover {
+  border-left: 4px solid white;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
