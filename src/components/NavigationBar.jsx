@@ -4,6 +4,7 @@ import { SavePage } from "./SavePage";
 import Home from "./Home";
 import { useNavigate } from "react-router-dom";
 import { FaPowerOff } from "react-icons/fa";
+import { googleLogout } from "@react-oauth/google";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
@@ -11,7 +12,15 @@ const NavigationBar = () => {
 
   function handleLogout(e) {
     e.preventDefault();
-    navigate("/");
+    console.log("logging out");
+    googleLogout();
+    window.location.href =
+      "https://appengine.google.com/_ah/logout?continue=http://localhost:3000";
+    // navigate("/");
+    // document.location.href =
+    //   "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=" +
+    //   "http://localhost:3000/";
+    //  navigate("")
   }
   return (
     <>

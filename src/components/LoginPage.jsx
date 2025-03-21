@@ -1,12 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Form from "./Form";
-import { CiUser } from "react-icons/ci";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { TbPassword } from "react-icons/tb";
+import Cookies from "js-cookie";
+import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
 
 const LoginPage = () => {
   const [action, setAction] = useState("Login");
+  const [isLoggedin, setIsLoggedin] = useState(false);
   const navigate = useNavigate();
 
   function saveNewUser(e) {
@@ -14,18 +13,19 @@ const LoginPage = () => {
     alert("Sign up successful");
   }
 
-  function handleSignUp(e) {
-    e.preventDefault();
-    if (action === "Sign Up") saveNewUser(e);
+  // function handleLogin(e) {
+  //   e.preventDefault();
+  //   // action === "Login" ? navigate("/health") : setAction("Login");
+  // window.location.href = "http://localhost:8080";
+  // }
 
-    if (action === "Login") setAction("Sign Up");
-  }
-
-  function handleLogin(e) {
-    e.preventDefault();
-    // action === "Login" ? navigate("/health") : setAction("Login");
-    window.location.href = "http://localhost:8080";
-  }
+  const handleLogin = useGoogleLogin({
+    onSuccess: (tokenResponse) => {
+      Cookies.set("access_token", tokenResponse.access_token);
+      navigate("/health");
+    },
+    onError: (err) => console.log("err ", JSON.stringify(err)),
+  });
 
   return (
     <div className="container-fluid">
